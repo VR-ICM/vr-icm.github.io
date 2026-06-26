@@ -1,5 +1,10 @@
 ## Development
 
+Use `pnpm` for package management and scripts if possible. Do not use `npm`, `yarn`, or other package managers.
+
+Alert the user if `pnpm` is not available and point them in the right direction as to how to install it.
+DO NOT autonomously do the installation process for them.
+
 When starting the dev server, use background mode:
 
 ```
