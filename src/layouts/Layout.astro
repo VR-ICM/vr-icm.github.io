@@ -1,190 +1,38 @@
 ---
+import "../styles/global.css";
+
 const frontmatter = Astro.props.frontmatter ?? {};
-const title = frontmatter.title ?? Astro.props.title ?? 'VR Building Simulation Research';
-const navTitle = title.replace(/\s*\|\s*VR Building Simulation Research$/, '');
+const title =
+    frontmatter.title ?? Astro.props.title ?? "VR Building Simulation Research";
+const pageTitle = title.replace(/\s*\|\s*VR Building Simulation Research$/, "");
 const description =
-	frontmatter.description ??
-	Astro.props.description ??
-	'Undergraduate research project exploring VR visualization environments for CAD-based building education and simulation.';
+    frontmatter.description ??
+    Astro.props.description ??
+    "Undergraduate research project exploring VR visualization environments for CAD-based building education and simulation.";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="description" content={description} />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
-	</head>
-	<body>
-		<header>
-			<a class="site-title" href="/">{navTitle}</a>
-			<nav aria-label="Primary navigation">
-				<a href="/">Home</a>
-				<a href="/research/">Research Areas</a>
-				<a href="/team/">Team</a>
-			</nav>
-		</header>
-		<main>
-			<slot />
-		</main>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <meta name="description" content={description} />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="icon" href="/favicon.ico" />
+        <meta name="generator" content={Astro.generator} />
+        <title>{title}</title>
+    </head>
+    <body>
+        <header>
+            <h1>{pageTitle}</h1>
+            <ul aria-label="Primary pages">
+                <li><a href="/">Home</a></li>
+                <li><a href="/research/">Research</a></li>
+                <li><a href="/team/">Team</a></li>
+            </ul>
+        </header>
+        <main>
+            <slot />
+        </main>
+    </body>
 </html>
-
-<style is:global>
-	:root {
-		color-scheme: light dark;
-		--bg: #fbfaf7;
-		--fg: #171512;
-		--muted: #625d55;
-		--line: #d8d0c5;
-		--link: #234f8f;
-		--paper: #fffdf8;
-	}
-
-	@media (prefers-color-scheme: dark) {
-		:root {
-			--bg: #151413;
-			--fg: #eee7dc;
-			--muted: #b9afa2;
-			--line: #403b35;
-			--link: #9dbef0;
-			--paper: #1d1b19;
-		}
-	}
-
-	* {
-		box-sizing: border-box;
-	}
-
-	body {
-		margin: 0;
-		background: var(--bg);
-		color: var(--fg);
-		font-family: Georgia, 'Times New Roman', serif;
-		font-size: 18px;
-		line-height: 1.65;
-	}
-
-	header,
-	main {
-		max-width: 46rem;
-		margin: 0 auto;
-		padding: 1.5rem;
-	}
-
-	header {
-		display: flex;
-		justify-content: space-between;
-		gap: 1rem;
-		border-bottom: 1px solid var(--line);
-		font-size: 0.95rem;
-		font-family: system-ui, sans-serif;
-	}
-
-	nav {
-		display: flex;
-		gap: 0.8rem;
-		flex-wrap: wrap;
-		justify-content: end;
-	}
-
-	a {
-		color: var(--link);
-		text-underline-offset: 0.18em;
-	}
-
-	.site-title {
-		color: var(--fg);
-		text-decoration: none;
-		font-family: Georgia, 'Times New Roman', serif;
-		font-size: 1.25rem;
-		font-weight: 600;
-		line-height: 1.2;
-	}
-
-	h1,
-	h2,
-	h3 {
-		line-height: 1.2;
-		font-weight: 500;
-	}
-
-	h1 {
-		font-size: clamp(2rem, 6vw, 3.6rem);
-		letter-spacing: -0.04em;
-		margin: 3rem 0 1rem;
-	}
-
-	h2 {
-		font-size: 1.35rem;
-		margin-top: 2.6rem;
-		border-bottom: 1px solid var(--line);
-	}
-
-	h3 {
-		font-size: 1.05rem;
-		margin-bottom: 0.2rem;
-	}
-
-	p,
-	ul,
-	ol {
-		margin-top: 0.6rem;
-	}
-
-	main {
-		counter-reset: section;
-	}
-
-	main > :first-child {
-		margin-top: 1rem;
-	}
-
-	h1 + p {
-		font-size: 1.25rem;
-		color: var(--muted);
-	}
-
-	.note,
-	figcaption {
-		color: var(--muted);
-		font-size: 0.95rem;
-	}
-
-	h2 {
-		counter-increment: section;
-	}
-
-	h2::before {
-		content: counter(section) '. ';
-		color: var(--muted);
-	}
-
-	figure {
-		margin: 1.2rem 0;
-		padding: 1rem;
-		background: var(--paper);
-		border: 1px solid var(--line);
-	}
-
-	img,
-	video {
-		max-width: 100%;
-		height: auto;
-	}
-
-	@media (max-width: 42rem) {
-		header {
-			display: block;
-		}
-
-		nav {
-			justify-content: start;
-			margin-top: 0.5rem;
-		}
-	}
-</style>
