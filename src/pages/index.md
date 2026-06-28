@@ -6,7 +6,7 @@ description: Undergraduate research project exploring component-level VR learnin
 
 ## Project Scope
 
-This project investigates how VR can create focused learning environments for BIM building models. Using models built in Autodesk Revit, when visualized in Unreal Engine parts of buildings can be expanded, inspected, and connected to metadata such as their material properties and fire ratings.
+This project investigates how VR can create focused learning environments for BIM building models. Models are built in Autodesk Revit and visualized in Unreal Engine, where parts of a building can be expanded, inspected, and connected to metadata such as their material properties and fire ratings.
 
 ## Current Status
 
