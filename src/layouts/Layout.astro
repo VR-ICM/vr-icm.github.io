@@ -1,14 +1,9 @@
 ---
 import "../styles/global.css";
 
-const frontmatter = Astro.props.frontmatter ?? {};
-const title =
-    frontmatter.title ?? Astro.props.title ?? "VR Building Simulation Research";
-const pageTitle = title.replace(/\s*\|\s*VR Building Simulation Research$/, "");
-const description =
-    frontmatter.description ??
-    Astro.props.description ??
-    "Undergraduate research project exploring VR visualization environments for CAD-based building education and simulation.";
+const frontmatter = Astro.props.frontmatter;
+const title = frontmatter.title ?? Astro.props.title;
+const description = frontmatter.description ?? Astro.props.description;
 ---
 
 <!doctype html>
@@ -23,16 +18,57 @@ const description =
         <title>{title}</title>
     </head>
     <body>
+        <aside class="coordinate-rail" aria-hidden="true">
+            <span></span>
+        </aside>
         <header>
-            <h1>{pageTitle}</h1>
+            <h1>{title}</h1>
             <ul aria-label="Primary pages">
-                <li><a href="/">Home</a></li>
-                <li><a href="/research/">Research</a></li>
-                <li><a href="/team/">Team</a></li>
+                <a href="/">Home</a>
+                <span> / </span>
+                <a href="/research/">Research</a>
+                <span> / </span>
+                <a href="/team/">Team</a>
             </ul>
         </header>
         <main>
             <slot />
         </main>
+        <script>
+            const railText = document.querySelector<HTMLElement>(
+                ".coordinate-rail span",
+            );
+            const rail = railText?.parentElement;
+            let railTimer: number | undefined;
+
+            const randomCoordinates = () =>
+                Array.from({ length: 11 }, () => {
+                    const latitude = Math.random() * 180 - 90;
+                    const longitude = Math.random() * 360 - 180;
+
+                    return `${latitude >= 0 ? "N" : "S"}
+                            ${Math.abs(latitude).toFixed(3)}
+                            ${longitude >= 0 ? "E" : "W"}
+                            ${Math.abs(longitude).toFixed(3)}
+                    `;
+                })
+                    .join(" ")
+                    .replaceAll(".", "·");
+
+            const rollCoordinates = () => {
+                if (railText) railText.textContent = randomCoordinates();
+            };
+
+            rollCoordinates();
+
+            rail?.addEventListener("pointerenter", () => {
+                rollCoordinates();
+                railTimer = window.setInterval(rollCoordinates, 85);
+            });
+
+            rail?.addEventListener("pointerleave", () => {
+                window.clearInterval(railTimer);
+            });
+        </script>
     </body>
 </html>

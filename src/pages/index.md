@@ -8,47 +8,61 @@ description: Undergraduate research project exploring component-level VR learnin
 
 This project investigates how VR can create focused learning environments for BIM building models. Models are built in Autodesk Revit and visualized in Unreal Engine, where parts of a building can be expanded, inspected, and connected to metadata such as their material properties and fire ratings.
 
-## Current Status
-
-**Implemented**
-- Prototype VR environment for viewing and interacting with building models
-- Expandable, interactive wall and floor elements
-
-**Top of mind**
-- HUD display for metadata information
-
-**Next steps**
-- Loading Datasmith exports at runtime instead of in-editor
+[Meet the team.](/team/)
 
 ## Research Questions
 
 - How much model preparation is required to make building components teachable in VR?
 - What metadata is useful to show during inspection?
-- Can VR hardware support practical construction training at a low cost?
-- Where is the adoption barrier: hardware cost, software workflow, or content authoring?
+- Can VR support practical construction training at a low cost?
+- Where is the adoption barrier: hardware, software workflow, or content authoring?
 
-## Research Areas
+[Read more about the research areas.](/research/)
 
-The work is collaborative, with each area having a primary point of contact for more detailed questions.
- 
-- Simulation development: Damian Bednarczyk
-- CAD and building data workflow: Miguel Macias
-- Sustainability, documentation, and adoption research: Abraham Gallardo
+## Current Status
 
-[Read about the research areas.](/research/)
+**Implemented**
+
+- Prototype VR environment for viewing and interacting with building models
+- Expandable, interactive wall and floor elements
+
+**Top of mind**
+
+- HUD display for metadata information
+
+**Next steps**
+
+- Loading Datasmith exports at runtime instead of in-editor
 
 ## Media and Demos
 
-Placeholder entries for demo captures, flowcharts, and simulation media. Replace these with project assets and short explanations as they are finalized.
+<style>
+figure {
+    margin: 1.5rem 0;
+    padding: 1rem 1.2rem;
+    border: 1px solid var(--rule);
+    background: var(--page);
+}
+
+figcaption {
+    color: var(--faint);
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+img,
+video {
+    max-width: 100%;
+    height: auto;
+}
+</style>
 
 <figure>
-	<h3>Simulation prototype</h3>
-	<p>Short caption for a VR walkthrough, interaction demo, or model inspection clip.</p>
-	<figcaption>Image or video placeholder.</figcaption>
+  <h3>Simulation prototype</h3>
+  <p>Short caption for a VR walkthrough, interaction demo, or model inspection clip.</p>
 </figure>
 
 <figure>
-	<h3>CAD-to-simulation workflow</h3>
-	<p>Short caption for a flowchart showing how building data enters the environment.</p>
-	<figcaption>Diagram placeholder.</figcaption>
+  <h3>CAD-to-simulation workflow</h3>
+  <p>Short caption for a flowchart showing how building data enters the environment.</p>
 </figure>

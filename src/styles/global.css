@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Miranda+Sans:ital,wght@0,400..700;1,400..700&display=swap");
+
 :root {
     color-scheme: light dark;
     --page: #f7f4ea;
@@ -21,8 +23,27 @@
     box-sizing: border-box;
 }
 
-html {
-    background: var(--page);
+.coordinate-rail {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 1.2rem;
+    overflow: hidden;
+    padding-block: 0.5rem;
+    border-right: 1px solid var(--rule);
+    color: var(--faint);
+    font-family: "SFMono-Regular", Consolas, monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.coordinate-rail span {
+    display: block;
+    overflow-wrap: anywhere;
+    text-align: center;
+    word-break: break-all;
 }
 
 body {
@@ -31,10 +52,9 @@ body {
     padding: 2rem 1.5rem 4rem;
     background: var(--page);
     color: var(--ink);
-    font-family: "Latin Modern Roman", "CMU Serif", "Computer Modern Serif", Georgia, serif;
+    font-family: "Miranda Sans", "Helvetica", sans-serif;
     font-size: clamp(17px, 1.6vw, 20px);
     line-height: 1.7;
-    hyphens: auto;
 }
 
 header {
@@ -42,22 +62,17 @@ header {
     justify-content: space-between;
     gap: 2rem;
     margin-bottom: 4rem;
-    padding-bottom: 0.45rem;
 }
 
 header ul {
-    margin: 0;
+    flex-shrink: 0;
+    margin: 0.7rem 0 0;
     padding: 0;
-    list-style: none;
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    line-height: 1.35;
+    font-size: 0.8rem;
+    line-height: 1.35rem;
     text-align: right;
     text-transform: uppercase;
-}
-
-header li + li {
-    margin-top: 0.35rem;
+    white-space: nowrap;
 }
 
 header a {
@@ -108,42 +123,13 @@ ol {
     margin: 0.65rem 0 0;
 }
 
-p {
-    text-align: justify;
-}
-
 main li + li {
     margin-top: 0.2rem;
 }
 
-strong {
-    font-variant-caps: small-caps;
-    font-weight: 600;
-    letter-spacing: 0.035em;
-}
-
-figure {
-    margin: 1.5rem 0;
-    padding: 1rem 1.2rem;
-    border: 1px solid var(--rule);
-    background: var(--page);
-}
-
-figcaption {
-    color: var(--faint);
-    font-size: 0.9rem;
-    font-style: italic;
-}
-
-img,
-video {
-    max-width: 100%;
-    height: auto;
-}
-
 @media (max-width: 42rem) {
     body {
-        padding-inline: 1rem;
+        padding-inline: 2.25rem 1rem;
     }
 
     header {
@@ -154,9 +140,5 @@ video {
     header ul {
         margin-top: 0.75rem;
         text-align: left;
-    }
-
-    p {
-        text-align: start;
     }
 }
