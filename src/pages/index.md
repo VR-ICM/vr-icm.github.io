@@ -58,7 +58,7 @@ video {
 </style>
 
 <figure>
-  <video controls src="/6-30-26%20wall%20layer%20project%20demo-web.mp4"></video>
+  <video controls preload="metadata" src="/6-30-26%20wall%20layer%20project%20demo-web.mp4"></video>
   <h3>Simulation prototype</h3>
   <p>Proof-of-concept interactivity demo from early in the project’s transition to Unreal Engine.</p>
 </figure>
