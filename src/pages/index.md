@@ -58,11 +58,7 @@ video {
 </style>
 
 <figure>
+  <video controls src="/6-30-26%20wall%20layer%20project%20demo-web.mp4"></video>
   <h3>Simulation prototype</h3>
-  <p>Short caption for a VR walkthrough, interaction demo, or model inspection clip.</p>
-</figure>
-
-<figure>
-  <h3>CAD-to-simulation workflow</h3>
-  <p>Short caption for a flowchart showing how building data enters the environment.</p>
+  <p>Proof-of-concept interactivity demo from early in the project’s transition to Unreal Engine.</p>
 </figure>
