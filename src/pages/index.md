@@ -15,24 +15,19 @@ This project investigates how VR can create focused learning environments for BI
 - How much model preparation is required to make building components teachable in VR?
 - What metadata is useful to show during inspection?
 - Can VR support practical construction training at a low cost?
-- Where is the adoption barrier: hardware, software workflow, or content authoring?
+- Do VR visualizations support a student's mental understanding of blueprints?
 
 [Read more about the research areas.](/research/)
 
 ## Current Status
 
-**Implemented**
+We have already implemented the following:
 
 - Prototype VR environment for viewing and interacting with building models
 - Expandable, interactive wall and floor elements
-
-**Top of mind**
-
 - HUD display for metadata information
 
-**Next steps**
-
-- Loading Datasmith exports at runtime instead of in-editor
+Next steps include integrating telemetry to understand a student's actions while inspecting a model or completing a task.
 
 ## Media and Demos
 
