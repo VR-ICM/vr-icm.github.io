@@ -62,3 +62,8 @@ video {
   <h3>Simulation prototype</h3>
   <p>Proof-of-concept interactivity demo from early in the project’s transition to Unreal Engine.</p>
 </figure>
+<figure>
+  <img src="/summer%20symposium%20poster.jpg"></img>
+  <h3>Symposium Poster</h3>
+  <p>Presented at the 2026 Summer-of-Inquiry Symposium at Illinois State University.</p>
+</figure>
