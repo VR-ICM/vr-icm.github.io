@@ -58,6 +58,11 @@ video {
   <p>Proof-of-concept interactivity demo from early in the project’s transition to Unreal Engine.</p>
 </figure>
 <figure>
+  <video controls preload="metadata" src="/webxr-multiplayer-demo.mp4"></video>
+  <h3>WebXR multiplayer demo</h3>
+  <p>Browser-based multi-user workspace built with A-Frame and Networked-Aframe. Two users share a room, see each other's avatars, and grab and move the same objects, with changes synced live between clients.</p>
+</figure>
+<figure>
   <img src="/summer%20symposium%20poster.jpg"></img>
   <h3>Symposium Poster</h3>
   <p>Presented at the 2026 Summer-of-Inquiry Symposium at Illinois State University.</p>
